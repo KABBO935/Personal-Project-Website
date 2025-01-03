@@ -1,0 +1,444 @@
+/* 
+Author: Kabbo Bhattacharjee;
+Theme : Personal Brand;
+version: 1.0
+*/
+
+/* General reset and typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(24, 0, 51);
+    color: rgba(216, 193, 253, 0.945);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    background: linear-gradient(13deg, #040b1a, #450679);
+
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;           
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 23px;
+}
+
+nav ul li a:hover {
+
+    color: rgb(140, 105, 235);          /* Can add some more decoration in future */
+    font-size: 1.1rem;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+}
+
+.brand-text {
+    font-size: 1.8rem;
+    color: rgb(128, 30, 30);
+    position: relative;
+    animation: bulbAnimation 1.1s infinite;
+}
+
+@keyframes bulbAnimation {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+        color: rgb(243, 242, 242);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+        color: rgb(255, 255, 255);
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+        color: rgb(218, 201, 250);
+    }
+}
+
+.klogo img {
+    height: 70px; 
+    width: auto;
+    margin-left: 15px; /* Adjust spacing to fit the logo properly */
+}
+
+
+/* Here I am adding Section styles */
+/* Full-height section with background image */
+.firstsection {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Background image styling */
+/* Full-height section with background image */
+.firstsection {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6); /* Fallback color for older browsers */
+}
+
+/* Background image styling */
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    animation: fadeAndBlur 10s infinite alternate;
+}
+
+@keyframes fadeAndBlur {
+    0% {
+        opacity: 0.5;
+        filter: blur(100px);
+    }
+    5% {
+        opacity: 0.5;
+        filter: blur(10px);
+    }
+    10% {
+        opacity: 0.6;
+        filter: blur(8px);
+    }
+    20% {
+        opacity: 0.7;
+        filter: blur(7px);
+    }
+    30% {
+        opacity: 0.8;
+        filter: blur(6px);
+    }
+    40% {
+        opacity: 0.9;
+        filter: blur(4px);
+    }
+
+
+    100% {
+        opacity: 0.5;
+        filter: blur(0px);
+    }
+
+}
+
+
+/* Overlay with text styling */
+.text-overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgba(216, 193, 253, 0.945);
+    animation: highlightText 5s infinite; /* Text highlight animation */
+}
+
+.text-container {
+    font-size: 4rem; /* Increase font size */
+    font-weight: bold; /* Make text bold */
+}
+
+/* Keyframes for text highlight animation */
+@keyframes highlightText {
+    0% {
+        color: rgba(234, 223, 250, 0.945);
+        text-shadow: 0 0 15px rgba(245, 238, 238, 0.7);
+    }
+    50% {
+        color: rgb(140, 147, 241); /* Highlighted color */
+        text-shadow: 0 0 25px rgb(84, 43, 230);
+    }
+    100% {
+        color: rgba(199, 171, 245, 0.945);
+        text-shadow: 0 0 15px rgba(201, 230, 97, 0.7);
+    }
+}
+
+
+/* Optional: Adding a pulsating effect */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Applying the pulsating effect to the text */
+.text-overlay span {
+    animation: pulse 3s infinite;
+}
+
+/* Text container styling */
+.text-container {
+    z-index: 1; /* Ensure text is above the background image */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Styling for the text */
+.firstsection h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.firstsection #element {
+    font-size: 4rem;
+    color: rgba(117, 9, 218, 1);
+}
+
+.purple {
+    color: rgb(97, 8, 180);
+}
+
+
+
+/* Second Section: Stand-up ticket section */
+.secondsection {
+
+    background-color: #162f72;
+    padding: 15rem 10%;
+    text-align: center;
+    animation: bg-gradient 10s infinite alternate;
+}
+
+.secondsection h1 {
+    font-size: 4.5rem;
+    margin-bottom: 2.5rem;
+    color: rgb(11, 3, 39);
+    text-shadow: 
+        0 0 10px rgba(248, 244, 244, 0.8), /* Bright white glow */
+        0 0 20px rgba(226, 8, 8, 0.6), /* Soft white halo */
+        0 0 30px rgba(217, 248, 106, 0.5); /* Subtle color shadow */
+    background: linear-gradient(45deg, rgb(253, 244, 244), rgba(224, 245, 148, 0.5));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* Standard property */
+    padding: 10px;
+}
+
+
+.secondsection .buttons {
+    padding: 16px 24px;
+    background: linear-gradient(135deg, #37dd7f, #1e4934); /* Gradient background */
+    color: white;
+    border: 2px solid transparent; /* Transparent border for a smoother effect */
+    border-radius: 20px; /* Slightly larger border-radius for a more modern look */
+    font-size: 21px;
+    font-weight: bold; /* Bold text for better readability */
+    text-transform: uppercase; /* Uppercase text for emphasis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    margin: 25px 0;
+    transition: all 0.3s ease;
+    cursor: pointer; /* Pointer cursor for better UX */
+    outline: none; /* Remove outline on focus */
+}
+
+.secondsection .buttons:hover {
+    background: linear-gradient(135deg, #031a0f, #77d39f); /* Reversed gradient on hover */
+    border-color: #041808; /* Border color changes to match the hover gradient */
+    transform: translateY(-3px); /* Slight lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+/* Product*/
+
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    overflow: hidden;
+    background: black; /* Optional, to ensure visibility */
+}
+
+.background-video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+/* Social section */
+
+.social {
+    background: linear-gradient(13deg, #3765c0, #020427);
+    padding: 2rem 0;
+}
+
+.social ul {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    list-style: none;
+}
+
+.social ul li {
+    display: inline-block;
+}
+
+.social-link {
+    color: rgb(236, 238, 240);
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #a26afd;
+    transform: translateY(-5px);
+}
+
+.fab {
+    transition: color 0.3s ease;
+}
+
+.fab:hover {
+    color: #9b3d17;
+}
+
+/* Footer */
+.footer {
+    background-color: #280452;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+.footer a {
+    color: rgb(236, 238, 240);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* Keyframes for background color animation */
+@keyframes bg-gradient {
+    0% {
+        background-color: #1e4934;
+    }
+    50% {
+        background-color: #1d0c44;
+    }
+    100% {
+        background-color: #1a0842;
+    }
+}
+
+/* General Styles for Tailwind Overrides */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+/* Video Section Styles */
+.video-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Adjust based on desired height */
+    overflow: hidden; /* Ensures content doesn't overflow outside of the container */
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video covers the container without distortion */
+    object-position: center center; /* Ensures video is centered and cropped properly */
+}
+
+
+/*NEXT PAGE BUTTON */
+
+.fancy-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    background-color: #6139c0;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+
+/* Button Hover Effect */
+.fancy-btn:hover {
+    font-size: 22px;
+    background-color: #a09be3; /* Slightly darker shade */
+    transform: translateY(-3px); /* Slightly reduced translation to avoid layout shift */
+    box-shadow: 0 6px 20px rgba(1, 3, 41, 0.15); /* Softer shadow with increased spread */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Smooth transition */
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+/* Latest Blog Posts Section */
+.latest-blog a {
+    color: #3182ce;
+    transition: color 0.3s ease;
+}
+.latest-blog a:hover {
+    color: #2b6cb0;
+}
+
+/* Support a Cause Section */
+.support-cause select, .support-cause input {
+    border-color: #e2e8f0;
+}
+.support-cause select:focus, .support-cause input:focus {
+    border-color: #3182ce;
+    outline: none;
+}

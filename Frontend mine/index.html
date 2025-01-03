@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KB</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+<!-- Bootstrap CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+    <header>
+        <nav>
+            <section class="brand">
+                <div class="left brand-text">KBonSpines</div>
+                <div class="klogo">
+                    <img src="logo.png" alt="LogoImage">
+                </div>
+            </section>
+            
+            <div class="right">
+                <ul>
+                    <li><a href="/">Clothing</a></li>
+                    <li><a href="/">Standup</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="/">Youtube</a></li>
+                    <li><a href="/">Register</a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Personal Introduction Section -->
+        <section class="firstsection">
+            <div class="slide-container">
+                <div class="slide photo-slide">
+                    <img src="bh.png" alt="Kabbo Bhatt" class="background-image">
+                </div>
+                <div class="slide text-slide">
+                    <div class="text-overlay">
+                        <div class="text-container">
+                            Hi! This is <span class="purple">Kabbo Bhatt</span>
+                            <div></div>
+                            <span id="element"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- Event Booking Section -->
+        <section class="secondsection">
+            <div class="insidesec2">
+               
+                <h4 class="text-gray">Book your tickets, to laugh!</h4>
+                <h1>Stand up</h1>
+                <form id="ticketForm">
+                    <label for="event_id">Select Event:</label>
+                    <select id="event_id">
+                        <option value="1">Event 1</option>
+                        <option value="2">Event 2</option>
+                    </select>
+                    <input type="number" id="quantity" placeholder="Number of Tickets" required>
+                    <button type="submit" class="buttons">Show Tickets</button>
+                </form>
+                
+                <script>
+                    document.getElementById('ticketForm').addEventListener('submit', function(event) {
+                        event.preventDefault();
+                        
+                        const event_id = document.getElementById('event_id').value;
+                        const quantity = document.getElementById('quantity').value;
+                
+                        // Simulate a POST request
+                        console.log('Event ID:', event_id);
+                        console.log('Quantity:', quantity);
+                
+                        // You can replace the above with an actual AJAX call to send this data to a server.
+                    });
+                </script>
+                
+            </div>
+        </section>
+
+<!-- Video Section -->
+<section class="video-section">
+    <div class="video-container">
+        <video autoplay loop muted class="background-video">
+            <!-- Relative path to the video -->
+            <source src="KB.mp4" type="video/mp4">
+        </video>
+    </div>
+</section> 
+
+<!-- Button to Scroll to Frontend Section -->
+<div class="text-center my-4">
+    <a href="http://localhost:5001/" class="fancy-btn">
+        <span>CLICK TO BUY !</span>
+    </a>
+</div>
+
+        
+          
+
+        <!-- Latest Blog Posts Section -->
+        <section class="latest-blog py-12 bg-gray-200">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold mb-6 text-center">Latest Blog Posts</h2>
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold mb-2">Blog Post Title 1</h3>
+                        <p class="text-gray-700 mb-4">Snippet of the blog post content...</p>
+                        <a href="#" class="text-blue-500 hover:underline">Read More</a>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Blog Post Title 2</h3>
+                        <p class="text-gray-700 mb-4">Snippet of the blog post content...</p>
+                        <a href="#" class="text-blue-500 hover:underline">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Support a Cause Section -->
+        <section class="support-cause py-12 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold mb-6 text-center">Support a Cause</h2>
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <p class="text-lg mb-4">Your generosity can make a difference!</p>
+                    <div class="mb-4">
+                        <label for="cause" class="block text-lg font-semibold mb-2">Select a Cause:</label>
+                        <select id="cause" class="w-full p-2 border border-gray-300 rounded-lg">
+                            <option value="education">Education</option>
+                            <!-- Add more options here -->
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="amount" class="block text-lg font-semibold mb-2">Donation Amount:</label>
+                        <input type="number" id="amount" class="w-full p-2 border border-gray-300 rounded-lg" placeholder="$ Amount">
+                    </div>
+                    <button class="w-full bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600">Donate Now</button>
+                </div>
+            </div>
+    </main>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Content creator', 'Vlogger', 'Entertainer', 'Chess player', 'Comedian'],
+            typeSpeed: 25,
+        });
+    </script>
+
+    <!-- Social Media Section -->
+    <section class="social bg-gradient py-5">
+        <div class="container d-flex justify-content-center align-items-center">
+            <ul class="list-inline text-center">
+                <li class="list-inline-item mx-3">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-facebook fa-2x"></i>
+                        <span>Facebook</span>
+                    </a>
+                </li>
+                <li class="list-inline-item mx-3">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-instagram fa-2x"></i>
+                        <span>Instagram</span>
+                    </a>
+                </li>
+                <li class="list-inline-item mx-3">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-youtube fa-2x"></i>
+                        <span>Youtube</span>
+                    </a>
+                </li>
+                <li class="list-inline-item mx-3">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-discord fa-2x"></i>
+                        <span>Discord</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+    
+    <!-- Footer Section -->
+    <section class="footer">
+        <div class="container">
+            <p> All rights reserved. Designed by <a href="">Kabbo Bhattacharjee</a></p>
+        </div>
+    </section>
+
+</body>
+</html>
